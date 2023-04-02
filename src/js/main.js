@@ -17,57 +17,23 @@ window.onscroll = function () {
 	prevScrollpos = currentScrollPos
 }
 
-// Burger button - MENU
-// const nav = document.querySelector('.nav')
-// const burgerBtn = document.querySelector('.burger-btn')
-// const navItems = document.querySelectorAll('.nav__item')
-
-// const handleNav = () => {
-// 	nav.classList.toggle('nav--active')
-// 	navItems.forEach(item => {
-// 		item.addEventListener('click', () => {
-// 			nav.classList.remove('nav--active')
-// 		})
-// 	})
-// }
-
-// burgerBtn.addEventListener('click', handleNav)
-
-// Alert i kopiowanie treści do schowka
-// function showAlert(message, duration) {
-// 	const alertBox = document.createElement('div')
-// 	alertBox.classList.add('alert')
-// 	alertBox.textContent = message
-// 	document.body.appendChild(alertBox)
-// 	setTimeout(function () {
-// 		alertBox.remove()
-// 	}, duration)
-// }
-
-// function copyToClipboard(elementId) {
-// 	const copyText = document.getElementById(elementId).textContent
-// 	navigator.clipboard
-// 		.writeText(copyText)
-// 		.then(() => {
-// 			// confirm('Tekst został skopiowany do schowka.')
-// 			showAlert('Kod produktu skopiowany do schowka!', 1500)
-// 		})
-// 		.catch(err => {
-// 			console.error('Wystąpił błąd podczas kopiowania do schowka: ', err)
-// 		})
-// }
-
 // Burger button - mój
 
 const burgerBtn = document.querySelector('.burger-btn')
 const burgerIcon = document.querySelector('.burger-btn__icon')
 const sideNav = document.querySelector('.side-nav')
 const navbar = document.querySelector('.navbar')
+const navItems = document.querySelectorAll('.nav-item')
 
 const navAction = () => {
 	burgerIcon.classList.toggle('active')
 	sideNav.classList.toggle('visible')
-	// navbar.classList.toggle('gradient')
+	navItems.forEach(item => {
+		item.addEventListener('click', () => {
+			burgerIcon.classList.add('active')
+			sideNav.classList.remove('visible')
+		})
+	})
 }
 
 burgerBtn.addEventListener('click', navAction)
