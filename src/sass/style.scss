@@ -22,12 +22,18 @@ html {
 h1 {
 	text-align: center;
 	font-size: 3.6rem;
-	margin: 20px 0;
+	margin: 10px 0;
+}
+
+h3 {
+	font-size: 2.4rem;
+	font-weight: 300;
 }
 
 a {
 	// font-size: 1.6rem;
 	text-decoration: none;
+	color: c.$half-dark;
 
 	&:active {
 		text-decoration: none;
@@ -102,7 +108,7 @@ footer {
 	height: 55px;
 	background-color: c.$white;
 	transition: 0.3s;
-	z-index: 30;
+	z-index: 300;
 
 	.logo {
 		display: flex;
@@ -271,6 +277,34 @@ footer {
 
 // ========================================
 
+.hero {
+	position: relative;
+	top: 55px;
+	height: 60vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+		url('../img/jungle-small.jpg');
+	background-position: center;
+	background-size: cover;
+	filter: contrast(1.05);
+	color: c.$white;
+	z-index: -1;
+
+	&__text {
+		position: absolute;
+		top: 10%;
+		margin: 30px;
+		text-align: center;
+
+		h1 {
+			font-size: 3rem;
+		}
+
+		h3 {
+			font-size: 2rem;
+		}
+	}
+}
+
 .offer {
 	margin-top: 500px;
 }
@@ -302,6 +336,20 @@ footer {
 			}
 		}
 	}
+
+	.hero {
+		&__text {
+			top: 20%;
+
+			h1 {
+				font-size: 3.6rem;
+			}
+
+			h3 {
+				font-size: 2.4rem;
+			}
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -318,6 +366,16 @@ footer {
 			display: flex;
 		}
 	}
+
+	.hero {
+		z-index: 1;
+		&__text {
+			top: 30%;
+			left: 50%;
+			margin: 0;
+			transform: translateX(-50%);
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -331,6 +389,20 @@ footer {
 			}
 		}
 	}
+
+	.hero {
+		top: 70px;
+		height: 50vh;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+			url('../img/jungle-big.jpg');
+
+		&__text {
+			top: 35%;
+			left: 10%;
+			transform: translateX(0);
+			text-align: left;
+		}
+	}
 }
 
 @media (min-width: 1100px) {
@@ -341,6 +413,13 @@ footer {
 
 		.logo {
 			margin-left: 200px;
+		}
+	}
+
+	.hero {
+		background-position: 0 700px;
+		&__text {
+			left: 208px;
 		}
 	}
 }
