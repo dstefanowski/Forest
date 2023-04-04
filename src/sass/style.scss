@@ -11,6 +11,7 @@ html,
 body {
 	height: 100%;
 	font-family: 'Montserrat', sans-serif;
+	scroll-padding-top: 70px;
 }
 
 html {
@@ -30,11 +31,11 @@ a {
 
 	&:active {
 		text-decoration: none;
-		color: #000;
+		color: c.$half-dark;
 	}
 	&:visited {
 		text-decoration: none;
-		color: #000;
+		color: c.$half-dark;
 	}
 }
 
@@ -96,6 +97,7 @@ footer {
 	position: fixed;
 	display: flex;
 	justify-content: space-between;
+	top: 0;
 	width: 100%;
 	height: 55px;
 	background-color: c.$white;
@@ -108,7 +110,7 @@ footer {
 		height: 100%;
 		margin-left: 15px;
 		padding: 20px 10px;
-		color: c.$black;
+		color: c.$half-dark;
 		font-size: 2.4rem;
 		text-decoration: none;
 		cursor: pointer;
@@ -117,15 +119,36 @@ footer {
 			font-size: 3rem;
 			margin-right: 5px;
 		}
-	}
 
-	.site-title {
-		// display: flex;
-		display: none;
-		align-items: center;
+		&:hover a {
+			color: c.$black;
+		}
 	}
 
 	.tabs {
+		position: absolute;
+		display: none;
+		top: 0;
+		left: 50%;
+		// background-color: tomato;
+
+		.nav-item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 55px;
+			width: 75px;
+			font-size: 1.2rem;
+			transition: 0.2s;
+
+			&:hover {
+				background-color: c.$half-dark;
+				color: c.$white;
+			}
+		}
+	}
+
+	.site-title {
 		// display: flex;
 		display: none;
 		align-items: center;
@@ -166,13 +189,12 @@ footer {
 		}
 	}
 }
-
-.scroll-up {
-	transform: translateY(0%);
-}
-.scroll-down {
-	transform: translateY(-150%);
-}
+// .scroll-up {
+// 	transform: translateY(0%);
+// }
+// .scroll-down {
+// 	transform: translateY(-150%);
+// }
 
 .side-nav {
 	position: fixed;
@@ -242,7 +264,24 @@ footer {
 	background-image: c.$main-gradient;
 }
 
+.scroll-active {
+	background-color: c.$black;
+	color: c.$white !important;
+}
+
 // ========================================
+
+.offer {
+	margin-top: 500px;
+}
+
+.aboutus {
+	margin-top: 500px;
+	background-color: c.$black;
+	h1 {
+		color: #fff;
+	}
+}
 
 // MEDIA =======================================================
 
@@ -261,6 +300,47 @@ footer {
 			.social {
 				margin-top: 20px;
 			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.navbar {
+		.burger-btn {
+			display: none;
+		}
+
+		.logo {
+			margin-left: 100px;
+		}
+
+		.tabs {
+			display: flex;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.navbar {
+		height: 70px;
+		.tabs {
+			.nav-item {
+				height: 70px;
+				width: 110px;
+				font-size: 1.6rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1100px) {
+	.navbar {
+		.tabs {
+			left: 60%;
+		}
+
+		.logo {
+			margin-left: 200px;
 		}
 	}
 }
