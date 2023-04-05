@@ -48,7 +48,7 @@ a {
 img {
 	height: auto;
 	width: 100%;
-	max-width: 600px;
+	max-width: 530px;
 }
 
 input,
@@ -95,6 +95,26 @@ footer {
 	max-width: 1200px;
 }
 
+.section-title {
+	margin-bottom: 30px;
+	font-weight: 300;
+	text-align: center;
+	font-size: 3.6rem;
+}
+
+.text-heading {
+	margin: 30px;
+	font-weight: 700;
+	font-size: 1.8rem;
+}
+
+.text-content {
+	margin: 0 20px;
+	text-align: left;
+	font-size: 1.4rem;
+	line-height: 25px;
+}
+
 // -----------------------------------------
 
 // NAVIGATION MOBILE =======================
@@ -104,8 +124,8 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	top: 0;
-	width: 100%;
 	height: 55px;
+	width: 100%;
 	background-color: c.$white;
 	transition: 0.3s;
 	z-index: 300;
@@ -148,7 +168,7 @@ footer {
 			transition: 0.2s;
 
 			&:hover {
-				background-color: c.$half-dark;
+				background-color: c.$black;
 				color: c.$white;
 			}
 		}
@@ -195,12 +215,11 @@ footer {
 		}
 	}
 }
-// .scroll-up {
-// 	transform: translateY(0%);
-// }
-// .scroll-down {
-// 	transform: translateY(-150%);
-// }
+
+.scroll-active {
+	background-color: c.$black;
+	color: c.$white !important;
+}
 
 .side-nav {
 	position: fixed;
@@ -211,6 +230,7 @@ footer {
 	transform: translateX(100%);
 	transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
 	background-color: c.$half-dark;
+	z-index: 10;
 
 	&__box {
 		display: flex;
@@ -229,18 +249,18 @@ footer {
 
 		.nav-item {
 			margin: 15px 0;
-			width: 250px;
 			padding: 15px;
+			width: 250px;
 			text-align: center;
 			border: 2px solid #545454;
 			cursor: pointer;
 		}
 
 		.home {
-			width: 100vw;
 			margin: 15px 0;
-			text-align: center;
+			width: 100vw;
 			background-image: linear-gradient(-60deg, #16a084a2 0%, #bbf43f7d 100%);
+			text-align: center;
 			border: none;
 			box-shadow: 0 6px 2px #3a3a3a;
 		}
@@ -249,14 +269,14 @@ footer {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-around;
-			width: 40px;
 			padding: 0;
+			width: 40px;
 			font-size: 4rem;
 			border: none;
 
 			i {
-				width: 40px;
 				margin: 0 20px;
+				width: 40px;
 			}
 		}
 	}
@@ -266,16 +286,8 @@ footer {
 	transform: translateX(0);
 }
 
-.gradient {
-	background-image: c.$main-gradient;
-}
-
-.scroll-active {
-	background-color: c.$black;
-	color: c.$white !important;
-}
-
 // ========================================
+// MAIN SECTION
 
 .hero {
 	position: relative;
@@ -287,7 +299,6 @@ footer {
 	background-size: cover;
 	filter: contrast(1.05);
 	color: c.$white;
-	z-index: -1;
 
 	&__text {
 		position: absolute;
@@ -303,18 +314,30 @@ footer {
 			font-size: 2rem;
 		}
 	}
-}
 
-.offer {
-	margin-top: 500px;
+	.fa-chevron-down {
+		position: absolute;
+		bottom: 10%;
+		left: 50%;
+		transform: translateX(-50%);
+		color: c.$white;
+		font-size: 4rem;
+		z-index: 1000;
+	}
 }
 
 .aboutus {
-	margin-top: 500px;
-	background-color: c.$black;
-	h1 {
-		color: #fff;
+	margin-top: 100px;
+	text-align: center;
+	.content-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 	}
+}
+.offer {
+	margin-top: 500px;
 }
 
 // MEDIA =======================================================
@@ -349,6 +372,16 @@ footer {
 				font-size: 2.4rem;
 			}
 		}
+
+		.fa-chevron-down {
+			font-size: 4.6rem;
+		}
+	}
+
+	.aboutus {
+		.text-content {
+			font-size: 1.6rem;
+		}
 	}
 }
 
@@ -374,6 +407,22 @@ footer {
 			left: 50%;
 			margin: 0;
 			transform: translateX(-50%);
+		}
+		.fa-chevron-down {
+			display: none;
+		}
+	}
+
+	.aboutus {
+		.text-heading {
+			margin-top: 40px;
+			font-size: 2.2rem;
+		}
+
+		.text-content {
+			margin: 20px 50px;
+			font-size: 1.8rem;
+			line-height: 35px;
 		}
 	}
 }
@@ -403,6 +452,22 @@ footer {
 			text-align: left;
 		}
 	}
+
+	.section-title {
+		margin-bottom: 40px;
+	}
+
+	.aboutus {
+		margin-top: 120px;
+
+		.text-heading {
+			font-size: 2.4rem;
+		}
+
+		.text-content {
+			margin: 20px 70px;
+		}
+	}
 }
 
 @media (min-width: 1100px) {
@@ -417,9 +482,25 @@ footer {
 	}
 
 	.hero {
-		background-position: 0 700px;
 		&__text {
 			left: 208px;
+		}
+	}
+
+	.aboutus {
+		.content-box {
+			justify-content: flex-end;
+			flex-direction: row;
+			text-align: left;
+
+			.text-heading {
+				margin: 0 20px 20px 70px;
+			}
+
+			.text-content {
+				margin: 20px 20px 20px 70px;
+				font-size: 1.6rem;
+			}
 		}
 	}
 }

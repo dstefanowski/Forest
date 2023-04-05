@@ -47,8 +47,14 @@ const contactTab = document.querySelector('.contact-scroll')
 window.onscroll = () => {
 	let currentScrollPos = window.pageYOffset
 
-	if (currentScrollPos < 100) {
+	if (currentScrollPos < 412) {
 		homeTab.classList.add('scroll-active')
+		aboutusTab.classList.remove('scroll-active')
+		offerTab.classList.remove('scroll-active')
+		contactTab.classList.remove('scroll-active')
+	} else if (currentScrollPos > 412 && currentScrollPos < 600) {
+		homeTab.classList.remove('scroll-active')
+		aboutusTab.classList.add('scroll-active')
 	} else {
 		homeTab.classList.remove('scroll-active')
 	}
