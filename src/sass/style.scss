@@ -354,8 +354,9 @@ footer {
   }
 }
 .offer {
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
+
   .text-heading {
     font-weight: 300;
     text-align: center;
@@ -365,19 +366,20 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     text-align: center;
 
     .offer-box {
+      display: flex;
+      flex-direction: column;
       margin: 20px;
       margin-top: 0;
 
       .offer-card {
         min-width: 220px;
-        max-width: 350px;
+        max-width: 300px;
         margin: 20px 20px 40px 20px;
         padding: 10px;
-        box-shadow: 0px 3px 8px 1px rgba(193, 193, 193, 1);
+        box-shadow: 1px 2px 3px 1px rgba(193, 193, 193, 1);
         border-radius: 10px;
 
         &__title {
@@ -395,6 +397,7 @@ footer {
           flex-direction: column;
           align-items: start;
           font-size: 1.2rem;
+          margin-left: 20px;
 
           .option {
             margin: 8px;
@@ -405,18 +408,35 @@ footer {
           }
 
           .out {
-            color: c.$grey;
+            color: c.$grey-two;
+          }
+
+          .fa-check {
+            margin-right: 5px;
+            color: c.$light-green;
+          }
+
+          .fa-minus {
+            margin-right: 5px;
+            color: c.$red;
           }
         }
 
         &__pick {
           margin: 15px;
           padding: 8px 25px;
+          background: none;
+          box-shadow: 0px 1px 2px 1px rgba(193, 193, 193, 1);
           border-radius: 10px;
+          transition: 0.3s;
+
+          &:hover {
+            background-color: c.$pastel-green;
+          }
         }
 
         .default {
-          background-color: lightgreen;
+          background-color: c.$light-green;
         }
       }
     }
@@ -474,6 +494,17 @@ footer {
       padding: 20px 35px;
     }
   }
+
+  .offer {
+    .offer__container {
+      .offer-box {
+        .offer-card {
+          min-width: 250px;
+          padding: 20px;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -526,6 +557,25 @@ footer {
 
     .text-heading {
       padding: 30px 60px;
+    }
+  }
+
+  .offer {
+    .offer__container {
+      .offer-box {
+        flex-direction: row;
+        overflow: auto;
+
+        .offer-box::-webkit-scrollbar {
+          height: 0;
+          width: 0;
+        }
+        // margin-left: 200px;
+        .offer-card {
+          min-width: 250px;
+          padding: 20px;
+        }
+      }
     }
   }
 }
@@ -586,6 +636,12 @@ footer {
       padding: 40px 100px;
     }
   }
+
+  .offer {
+    .text-heading {
+      font-size: 2.4rem;
+    }
+  }
 }
 
 @media (min-width: 1100px) {
@@ -631,6 +687,30 @@ footer {
 
     .text-heading {
       padding: 40px 100px;
+    }
+  }
+
+  .offer .offer__container .offer-box .offer-card {
+    width: 300px;
+    max-width: 300px;
+
+    &__title {
+      margin: 15px;
+      font-size: 2.2rem;
+    }
+
+    &__price {
+      font-size: 2.4rem;
+    }
+
+    &__options {
+      margin-left: 25px;
+      font-size: 1.6rem;
+    }
+
+    &__pick {
+      margin: 25px;
+      padding: 12px 50px;
     }
   }
 }
