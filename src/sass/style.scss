@@ -354,7 +354,73 @@ footer {
   }
 }
 .offer {
-  margin-top: 500px;
+  display: flex;
+  justify-content: center;
+  .text-heading {
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .offer__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    .offer-box {
+      margin: 20px;
+      margin-top: 0;
+
+      .offer-card {
+        min-width: 220px;
+        max-width: 350px;
+        margin: 20px 20px 40px 20px;
+        padding: 10px;
+        box-shadow: 0px 3px 8px 1px rgba(193, 193, 193, 1);
+        border-radius: 10px;
+
+        &__title {
+          margin: 10px;
+          font-size: 1.6rem;
+        }
+
+        &__price {
+          margin-bottom: 20px;
+          font-size: 1.8rem;
+          font-weight: 700;
+        }
+
+        &__options {
+          flex-direction: column;
+          align-items: start;
+          font-size: 1.2rem;
+
+          .option {
+            margin: 8px;
+          }
+
+          .in {
+            color: c.$black;
+          }
+
+          .out {
+            color: c.$grey;
+          }
+        }
+
+        &__pick {
+          margin: 15px;
+          padding: 8px 25px;
+          border-radius: 10px;
+        }
+
+        .default {
+          background-color: lightgreen;
+        }
+      }
+    }
+  }
 }
 
 // MEDIA =======================================================
@@ -451,12 +517,15 @@ footer {
     }
   }
 
+  .text-heading {
+    font-size: 2.2rem;
+  }
+
   .adventure {
     height: 160px;
 
     .text-heading {
       padding: 30px 60px;
-      font-size: 2.2rem;
     }
   }
 }
@@ -503,15 +572,18 @@ footer {
     }
   }
 
+  .text-heading {
+    font-size: 3rem;
+  }
+
   .adventure {
     height: 200px;
-	margin: 60px 0;
+    margin: 60px 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
       url("../img/girl-big.jpg");
 
     .text-heading {
       padding: 40px 100px;
-      font-size: 3rem;
     }
   }
 }
@@ -550,12 +622,15 @@ footer {
     }
   }
 
+  .text-heading {
+    font-size: 3.6rem;
+  }
+
   .adventure {
     height: 260px;
 
     .text-heading {
       padding: 40px 100px;
-      font-size: 3.6rem;
     }
   }
 }
