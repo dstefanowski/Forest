@@ -39,6 +39,7 @@ const navAction = () => {
 burgerBtn.addEventListener("click", navAction);
 // ============================================================================
 // ScrollSpy
+
 const homeTab = document.querySelector(".home-scroll");
 const aboutusTab = document.querySelector(".aboutus-scroll");
 const offerTab = document.querySelector(".offer-scroll");
@@ -52,15 +53,19 @@ window.onscroll = () => {
     aboutusTab.classList.remove("scroll-active");
     offerTab.classList.remove("scroll-active");
     contactTab.classList.remove("scroll-active");
-  } else if (currentScrollPos > 412 && currentScrollPos < 600) {
+  } else if (currentScrollPos > 412 && currentScrollPos < 800) {
     homeTab.classList.remove("scroll-active");
+    offerTab.classList.remove("scroll-active");
     aboutusTab.classList.add("scroll-active");
+  } else if (currentScrollPos > 1000) {
+    homeTab.classList.remove("scroll-active");
+    aboutusTab.classList.remove("scroll-active");
+    offerTab.classList.add("scroll-active");
   } else {
     homeTab.classList.remove("scroll-active");
   }
 };
 // ============================================================================
-
 // OFFER-CARDS
 
 const demoBtn = document.querySelector(".demo-btn");
