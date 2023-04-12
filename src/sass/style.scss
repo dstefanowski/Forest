@@ -84,11 +84,6 @@ ul {
   }
 }
 
-footer {
-  padding: 10px 0;
-  margin-top: 20px;
-}
-
 .wrapper {
   margin: 0 auto;
   width: 100%;
@@ -447,20 +442,72 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 60px;
   background-color: #2b2727;
-  background-image: linear-gradient(
-      rgba(18, 44, 21, 0.8),
-      rgba(6, 19, 8, 0.8)
-    ),
+  background-image: linear-gradient(rgba(15, 49, 19, 0.8), rgba(8, 33, 12, 0.8)),
     url("../img/brown-forest-small.jpg");
-    background-attachment: fixed;
-  // background-position: center;
-  // background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 
   .text-heading {
     padding: 10px 30px;
     color: c.$white;
     border: 1px solid white;
+  }
+}
+
+// ================================================================
+// Footer section
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+  background-color: c.$footer-grey;
+
+  &__logo-section {
+    font-size: 2.4rem;
+
+    i {
+      font-size: 3rem;
+      margin-right: 5px;
+    }
+  }
+
+  &__tabs-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+
+    .title {
+      margin-bottom: 8px;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .link {
+      margin-bottom: 5px;
+      color: c.$grey;
+      font-size: 1.2rem;
+    }
+  }
+
+  hr {
+    height: 3px;
+    width: 100%;
+    margin: 5px 0;
+    background-color: c.$half-dark;
+  }
+
+  &__copyright-section {
+    margin: 5px;
+    color: c.$grey;
+    font-size: 1.2rem;
   }
 }
 
@@ -599,6 +646,17 @@ footer {
       }
     }
   }
+
+  .footer {
+    &__tabs-section {
+      .title {
+        font-size: 1.8rem;
+      }
+      .link {
+        font-size: 1.4rem;
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -661,6 +719,54 @@ footer {
   .offer {
     .text-heading {
       font-size: 2.4rem;
+    }
+  }
+
+  .footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    &__logo-section {
+      height: 100px;
+      margin-right: 200px;
+      .logo__img {
+        font-size: 3rem;
+      }
+    }
+
+    &__tabs-section {
+      justify-content: end;
+      max-width: 500px;
+      margin-bottom: 50px;
+
+      .title {
+        font-size: 2.2rem;
+      }
+      .link {
+        font-size: 1.6rem;
+      }
+
+      &--aboutus {
+        margin-right: 50px;
+      }
+      &--company {
+        margin-right: 50px;
+      }
+      &--documents {
+        margin-right: 50px;
+      }
+    }
+
+    hr {
+      position: absolute;
+      bottom: 20px;
+    }
+
+    &__copyright-section {
+      position: absolute;
+      bottom: 0;
     }
   }
 }
