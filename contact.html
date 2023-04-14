@@ -5,13 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/eab495fa99.js" crossorigin="anonymous"></script>
+    <title>Kontakt</title>
+    <meta name="description" content="To jest opis meta description do nowej strony internetowej.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 
 <body>
+    <main class="contact-page">
 
-    <section class="navbar">
+
+        <section class="nav-contact-page">
+            <section class="navbar">
     <div class="logo"><a href="index.html">
             <div class="logo__img"><i class="fa-solid fa-tree"></i>Forest</div>
         </a>
@@ -28,7 +36,7 @@
         <a href="#" class="nav-item home home-scroll scroll-active">Home</a>
         <a href="#aboutus" class="nav-item aboutus-scroll">O Nas</a>
         <a href="#offer" class="nav-item offer-scroll">Oferta</a>
-        <a href="#contact" class="nav-item contact-scroll">Kontakt</a>
+        <a href="contact.html" target="_blank" class="nav-item contact-scroll">Kontakt</a>
     </div>
     <div class="burger-btn">
         <div class="burger-btn__icon active">
@@ -43,7 +51,7 @@
         <a href="#" class="nav-item home">Home</a>
         <a href="#aboutus" class="nav-item">O Nas</a>
         <a href="#offer" class="nav-item">Oferta</a>
-        <a href="#contact" class="nav-item">Kontakt</a>
+        <a href="contact.html" target="_blank" class="nav-item">Kontakt</a>
 
         <div class="social">
             <a href="" class="facebook"><i class="fa-brands fa-facebook"></i></a>
@@ -52,15 +60,57 @@
         </div>
     </div>
 </section>
-    <h1>Podstrona 2!</h1>
-    <a href="index.html">Strona główna</a>
-    <a href="page.html">Podstrona 1</a>
+        </section>
 
 
-    <div class="wrapper">
+        <section class="contact" id="contact">
+            <p class="section-caption">Potrzebujesz pomocy? Masz ciekawe uwagi?
+                Daj znać że jesteś z nami!</p>
 
-        <img src="../src/img/deer-7815910_1920.jpg" alt="Jelonek">
-    </div>
+            <div class="wrapper">
+                <div class="form-section">
+                    <div class="form-section__box--left">
+                        <form method="post" action="">
+                            <input type="text" class="form-control" id="name" placeholder="Imię i nazwisko..."
+                                name="name" value="" required>
+
+                            <input type="email" class="form-control" id="email" placeholder="E-mail..." name="email"
+                                value="" required>
+
+                            <textarea class="form-control" rows="10" placeholder="Wiadomość..." name="message"
+                                required></textarea>
+
+                            <div class="checkbox">
+                                <input type="checkbox" required>
+                                <p>Potwierdzam że zapoznałem się z regulaminem...</p>
+                            </div>
+
+                            <button class="send-button">
+                                WYŚLIJ
+                            </button>
+                        </form>
+
+                    </div>
+
+                    <div class="form-section__box--right" data-aos="fade-left" data-aos-anchor="#contact"
+                        data-aos-offset="500" data-aos-duration="500">
+                        <div class="location"> <i class="fa-solid fa-location-dot"></i>
+                            <p>Kalisz</p>
+                        </div>
+                        <div class="number">
+                            <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+                            <p>123 456 789</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
 
 
     <footer class="footer">

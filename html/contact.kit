@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/eab495fa99.js" crossorigin="anonymous"></script>
+    <title>Kontakt</title>
+    <meta name="description" content="To jest opis meta description do nowej strony internetowej.">
+    <!-- @include 'fonts.kit' -->
+    <!-- @include 'styles.kit' -->
+</head>
+
+<body>
+    <main class="contact-page">
+
+
+        <section class="nav-contact-page">
+            <!-- @include 'nav.kit' -->
+        </section>
+
+
+        <section class="contact" id="contact">
+            <p class="section-caption">Potrzebujesz pomocy? Masz ciekawe uwagi?
+                Daj znać że jesteś z nami!</p>
+
+            <div class="wrapper">
+                <div class="form-section">
+                    <div class="form-section__box--left">
+                        <form method="post" action="">
+                            <input type="text" class="form-control" id="name" placeholder="Imię i nazwisko..."
+                                name="name" value="" required>
+
+                            <input type="email" class="form-control" id="email" placeholder="E-mail..." name="email"
+                                value="" required>
+
+                            <textarea class="form-control" rows="10" placeholder="Wiadomość..." name="message"
+                                required></textarea>
+
+                            <div class="checkbox">
+                                <input type="checkbox" required>
+                                <p>Potwierdzam że zapoznałem się z regulaminem...</p>
+                            </div>
+
+                            <button class="send-button">
+                                WYŚLIJ
+                            </button>
+                        </form>
+
+                    </div>
+
+                    <div class="form-section__box--right" data-aos="fade-left" data-aos-anchor="#contact"
+                        data-aos-offset="500" data-aos-duration="500">
+                        <div class="location"> <i class="fa-solid fa-location-dot"></i>
+                            <p>Kalisz</p>
+                        </div>
+                        <div class="number">
+                            <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+                            <p>123 456 789</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- @include 'footer.kit' -->
+
+    <script src="dist/js/main.min.js"></script>
+</body>
+
+</html>
