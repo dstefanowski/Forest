@@ -523,7 +523,7 @@ ul {
     justify-content: space-between;
 
     .site-title {
-      display: block;
+      display: flex;
       margin-right: 30px;
 
       .offer-title {
@@ -649,6 +649,7 @@ ul {
         .form-control {
           margin-bottom: 25px;
           padding: 10px 30px;
+          width: 90%;
           background: none;
           color: c.$white;
           border: 2px solid #efefef;
@@ -657,7 +658,9 @@ ul {
 
         .checkbox {
           display: flex;
+          justify-content: center;
           margin-bottom: 15px;
+          color: c.$grey-two;
 
           input {
             margin-right: 5px;
@@ -823,6 +826,31 @@ ul {
       }
       .link {
         font-size: 1.4rem;
+      }
+    }
+  }
+
+  // ==============================================================
+
+  .nav-contact-page .navbar {
+    justify-content: space-around;
+
+    .logo {
+      margin: 0;
+    }
+  }
+
+  .contact {
+    margin-top: 100px;
+    .wrapper {
+      .form-section {
+        &__box--left {
+          .form-control {
+            margin-bottom: 40px;
+            padding: 20px 40px;
+            width: 70%;
+          }
+        }
       }
     }
   }
