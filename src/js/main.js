@@ -16,6 +16,7 @@
 // 	}
 // 	prevScrollpos = currentScrollPos
 // }
+
 // ============================================================================
 // Burger button - MY OWN
 
@@ -95,13 +96,18 @@ const premiumBtnPicker = () => {
 };
 
 const ultimateBtnPicker = () => {
+  ultimateBtn.classList.add("default");
   demoBtn.classList.remove("default");
   standardBtn.classList.remove("default");
   premiumBtn.classList.remove("default");
-  ultimateBtn.classList.add("default");
 };
 
 demoBtn.addEventListener("click", demoBtnPicker);
 standardBtn.addEventListener("click", standardBtnPicker);
 premiumBtn.addEventListener("click", premiumBtnPicker);
 ultimateBtn.addEventListener("click", ultimateBtnPicker);
+
+// ===============================================================================
+// Rellax.js test
+
+let rellax = new Rellax(".rellax");
