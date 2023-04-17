@@ -71,25 +71,37 @@ window.onscroll = () => {
 const demoBtn = document.querySelector(".demo-btn");
 const standardBtn = document.querySelector(".standard-btn");
 const premiumBtn = document.querySelector(".premium-btn");
+const ultimateBtn = document.querySelector(".ultimate-btn");
 
 const demoBtnPicker = () => {
   standardBtn.classList.remove("default");
   premiumBtn.classList.remove("default");
   demoBtn.classList.add("default");
+  ultimateBtn.classList.remove("default");
 };
 
 const standardBtnPicker = () => {
   demoBtn.classList.remove("default");
   premiumBtn.classList.remove("default");
   standardBtn.classList.add("default");
+  ultimateBtn.classList.remove("default");
 };
 
 const premiumBtnPicker = () => {
   demoBtn.classList.remove("default");
   standardBtn.classList.remove("default");
   premiumBtn.classList.add("default");
+  ultimateBtn.classList.remove("default");
+};
+
+const ultimateBtnPicker = () => {
+  demoBtn.classList.remove("default");
+  standardBtn.classList.remove("default");
+  premiumBtn.classList.remove("default");
+  ultimateBtn.classList.add("default");
 };
 
 demoBtn.addEventListener("click", demoBtnPicker);
 standardBtn.addEventListener("click", standardBtnPicker);
 premiumBtn.addEventListener("click", premiumBtnPicker);
+ultimateBtn.addEventListener("click", ultimateBtnPicker);
