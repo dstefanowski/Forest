@@ -12,6 +12,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="contact-page">
@@ -64,10 +66,12 @@
 
 
         <section class="contact" id="contact">
-            <p class="section-caption">Potrzebujesz pomocy? Masz ciekawe uwagi?
+            <p class="section-caption" data-aos="fade-in" data-aos-duration="1500">Potrzebujesz pomocy? Masz ciekawe
+                uwagi?
                 Daj znać że jesteś z nami!</p>
 
-            <div class="wrapper">
+            <div class="wrapper" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                data-aos-duration="800" data-aos-delay="100">
                 <div class="form-section">
                     <div class="form-section__box--left">
                         <form method="post" action="">
@@ -77,8 +81,8 @@
                             <input type="email" class="form-control" id="email" placeholder="E-mail..." name="email"
                                 value="" required>
 
-                            <textarea class="form-control message-text" rows="10" placeholder="Wiadomość..." name="message"
-                                required></textarea>
+                            <textarea class="form-control message-text" rows="10" placeholder="Wiadomość..."
+                                name="message" required></textarea>
 
                             <div class="checkbox">
                                 <input type="checkbox" required>
@@ -101,7 +105,8 @@
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.898452919782!2d19.890273977469306!3d50.08818807152533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1681560755099!5m2!1spl!2spl"
                     width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    referrerpolicy="no-referrer-when-downgrade" data-aos="fade-right" data-aos-anchor="#example-anchor"
+                    data-aos-offset="500" data-aos-duration="800" data-aos-delay="300"></iframe>
             </div>
         </section>
 
@@ -140,6 +145,12 @@
 </footer>
 
     <script src="dist/js/main.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
 </body>
 
 </html>

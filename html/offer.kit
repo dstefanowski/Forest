@@ -10,6 +10,8 @@
     <meta name="description" content="To jest opis meta description do nowej strony internetowej.">
     <!-- @include 'fonts.kit' -->
     <!-- @include 'styles.kit' -->
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="offer-page">
@@ -20,12 +22,13 @@
         </section>
 
         <section class="offer" id="offer">
-            <p class="section-caption">Wybierz jedną z naszych wspaniałych ofert!</p>
+            <p class="section-caption" data-aos="fade-in" data-aos-duration="1500">Wybierz jedną z naszych wspaniałych
+                ofert!</p>
             <div class="wrapper">
 
                 <div class="offer__container">
                     <div class="offer-box">
-                        <div class="offer-card demo">
+                        <div class="offer-card demo" data-aos="zoom-out-up" data-aos-delay="150">
                             <div class="offer-card__title">Demo</div>
                             <div class="offer-card__price">$0</div>
                             <ul class="offer-card__options">
@@ -37,7 +40,7 @@
                             </ul>
                             <button class="offer-card__pick demo-btn">Wybierz</button>
                         </div>
-                        <div class="offer-card standard">
+                        <div class="offer-card standard" data-aos="zoom-out-up" data-aos-delay="200">
                             <div class="offer-card__title">Standard</div>
                             <div class="offer-card__price">$99</div>
                             <ul class="offer-card__options">
@@ -49,7 +52,7 @@
                             </ul>
                             <button class="offer-card__pick standard-btn default">Wybierz</button>
                         </div>
-                        <div class="offer-card premium">
+                        <div class="offer-card premium" data-aos="zoom-out-up" data-aos-delay="250">
                             <div class="offer-card__title">Premium</div>
                             <div class="offer-card__price">$299</div>
                             <ul class="offer-card__options">
@@ -61,7 +64,7 @@
                             </ul>
                             <button class="offer-card__pick premium-btn">Wybierz</button>
                         </div>
-                        <div class="offer-card ultimate">
+                        <div class="offer-card ultimate" data-aos="zoom-out-up" data-aos-delay="300">
                             <div class="offer-card__title">Ultimate</div>
                             <div class="offer-card__price">$349</div>
                             <ul class="offer-card__options">
@@ -84,6 +87,12 @@
     <!-- @include 'footer.kit' -->
 
     <script src="dist/js/main.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
 </body>
 
 </html>

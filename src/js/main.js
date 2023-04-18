@@ -17,6 +17,11 @@
 // 	prevScrollpos = currentScrollPos
 // }
 
+// ===============================================================================
+// Rellax js
+
+let rellax = new Rellax(".rellax");
+
 // ============================================================================
 // Burger button - MY OWN
 
@@ -106,8 +111,3 @@ demoBtn.addEventListener("click", demoBtnPicker);
 standardBtn.addEventListener("click", standardBtnPicker);
 premiumBtn.addEventListener("click", premiumBtnPicker);
 ultimateBtn.addEventListener("click", ultimateBtnPicker);
-
-// ===============================================================================
-// Rellax.js test
-
-let rellax = new Rellax(".rellax");
