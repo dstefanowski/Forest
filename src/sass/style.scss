@@ -134,15 +134,18 @@ ul {
     color: c.$half-dark;
     font-size: 2.4rem;
     text-decoration: none;
-    cursor: pointer;
 
     i {
       font-size: 3rem;
       margin-right: 5px;
     }
 
-    &:hover a {
-      color: c.$black;
+    a {
+      transition: 0.2s;
+    }
+
+    a:hover {
+      color: c.$grey;
     }
   }
 
