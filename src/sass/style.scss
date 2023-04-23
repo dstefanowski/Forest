@@ -544,6 +544,16 @@ ul {
 .nav-contact-page {
   .navbar {
     justify-content: space-between;
+    background-color: c.$half-dark2;
+    color: c.$white;
+
+    .logo {
+      &__img {
+        a {
+          color: c.$white;
+        }
+      }
+    }
 
     .site-title {
       display: flex;
@@ -735,6 +745,16 @@ ul {
 .nav-offer-page {
   .navbar {
     justify-content: space-between;
+    background-color: c.$half-dark2;
+    color: c.$white;
+
+    .logo {
+      &__img {
+        a {
+          color: c.$white;
+        }
+      }
+    }
 
     .site-title {
       display: flex;
