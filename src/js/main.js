@@ -74,44 +74,48 @@ window.onscroll = () => {
 // ============================================================================
 // OFFER-CARDS
 
-const demoBtn = document.querySelector(".demo-btn");
-const standardBtn = document.querySelector(".standard-btn");
-const premiumBtn = document.querySelector(".premium-btn");
-const ultimateBtn = document.querySelector(".ultimate-btn");
+const optionBtns = document.querySelectorAll(".option-btn");
 
-const demoBtnPicker = () => {
-  standardBtn.classList.remove("default");
-  premiumBtn.classList.remove("default");
-  demoBtn.classList.add("default");
-  ultimateBtn.classList.remove("default");
+const optionsChange = () => {
+  optionBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (btn.classList.contains("default")) {
+        btn.classList.remove("default");
+      } else {
+        optionBtns.forEach((otherBtn) => {
+          if (otherBtn.classList.contains("default")) {
+            otherBtn.classList.remove("default");
+          }
+        });
+        btn.classList.add("default");
+      }
+    });
+  });
 };
 
-const standardBtnPicker = () => {
-  demoBtn.classList.remove("default");
-  premiumBtn.classList.remove("default");
-  standardBtn.classList.add("default");
-  ultimateBtn.classList.remove("default");
-};
-
-const premiumBtnPicker = () => {
-  demoBtn.classList.remove("default");
-  standardBtn.classList.remove("default");
-  premiumBtn.classList.add("default");
-  ultimateBtn.classList.remove("default");
-};
-
-const ultimateBtnPicker = () => {
-  ultimateBtn.classList.add("default");
-  demoBtn.classList.remove("default");
-  standardBtn.classList.remove("default");
-  premiumBtn.classList.remove("default");
-};
-
-demoBtn.addEventListener("click", demoBtnPicker);
-standardBtn.addEventListener("click", standardBtnPicker);
-premiumBtn.addEventListener("click", premiumBtnPicker);
-ultimateBtn.addEventListener("click", ultimateBtnPicker);
+optionsChange();
 
 // =========================================================================
+// ==============================================================================
+// Popup
 
+const popup = document.querySelector(".popup");
+const sendBtn = document.querySelector(".send-button");
+const closeBtn = document.querySelector(".close");
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
+const messageInput = document.querySelector(".message-text");
+const checkbox = document.querySelector("#checkbox");
 
+sendBtn.addEventListener("click", () => {
+  if (
+    nameInput.checkValidity() &&
+    emailInput.checkValidity() &&
+    messageInput.checkValidity() &&
+    checkbox.checkValidity()
+  ) {
+    popup.classList.add("show-popup");
+  } else {
+    alert("Wypełnij wszystkie pola formularza!");
+  }
+});

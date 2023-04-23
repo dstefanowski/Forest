@@ -628,6 +628,42 @@ ul {
           }
         }
       }
+
+      .popup {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        top: -320px;
+        left: 50%;
+        width: 80%;
+        height: 150px;
+        padding: 20px;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        color: #000;
+        border-radius: 8px;
+        transition: top 0.5s;
+        z-index: 100;
+
+        .close {
+          margin-top: 20px;
+          padding: 10px 20px;
+          border-radius: 5px;
+          background-color: c.$light-green;
+          color: c.$white;
+          transition: 0.3s;
+
+          &:hover {
+            background-color: c.$pastel-green;
+          }
+        }
+      }
+
+      .show-popup {
+        top: 40px;
+      }
     }
   }
 }
