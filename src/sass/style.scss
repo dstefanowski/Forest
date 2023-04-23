@@ -185,7 +185,7 @@ ul {
     align-items: center;
     width: 60px;
     height: 100%;
-    background-color: c.$black;
+    background-color: c.$white;
     cursor: pointer;
 
     &__icon {
@@ -193,7 +193,7 @@ ul {
         background: none;
 
         i {
-          color: c.$white;
+          color: c.$black;
           font-size: 4rem;
         }
       }
@@ -212,6 +212,13 @@ ul {
       }
     }
   }
+}
+
+.scroll-up {
+  transform: translateY(0%);
+}
+.scroll-down {
+  transform: translateY(-150%);
 }
 
 .scroll-active {
@@ -967,6 +974,7 @@ ul {
         height: 70px;
         width: 110px;
         font-size: 1.6rem;
+        // border-top: 6px solid black;
       }
     }
   }
