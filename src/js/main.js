@@ -1,8 +1,14 @@
 // alert('Kod JS podpięty prawidłowo')
 // ============================================================================
-// Navbar - Scroll-reveal
+// =============================================================================
+// Scroll-reveal & scrollSpy
+const homeTab = document.querySelector(".home-scroll");
+const aboutusTab = document.querySelector(".aboutus-scroll");
+const offerTab = document.querySelector(".offer-scroll");
+const contactTab = document.querySelector(".contact-scroll");
 
 let prevScrollpos = window.pageYOffset;
+
 window.onscroll = function () {
   let currentScrollPos = window.pageYOffset;
 
@@ -16,6 +22,23 @@ window.onscroll = function () {
     document.querySelector(".navbar").classList.add("scroll-down");
   }
   prevScrollpos = currentScrollPos;
+
+  if (currentScrollPos < 412) {
+    homeTab.classList.add("scroll-active");
+    aboutusTab.classList.remove("scroll-active");
+    offerTab.classList.remove("scroll-active");
+    contactTab.classList.remove("scroll-active");
+  } else if (currentScrollPos > 412 && currentScrollPos < 800) {
+    homeTab.classList.remove("scroll-active");
+    offerTab.classList.remove("scroll-active");
+    aboutusTab.classList.add("scroll-active");
+  } else if (currentScrollPos > 1000) {
+    homeTab.classList.remove("scroll-active");
+    aboutusTab.classList.remove("scroll-active");
+    offerTab.classList.add("scroll-active");
+  } else {
+    homeTab.classList.remove("scroll-active");
+  }
 };
 
 // ===============================================================================
@@ -44,34 +67,7 @@ const navAction = () => {
 };
 
 burgerBtn.addEventListener("click", navAction);
-// ============================================================================
-// ScrollSpy
 
-// const homeTab = document.querySelector(".home-scroll");
-// const aboutusTab = document.querySelector(".aboutus-scroll");
-// const offerTab = document.querySelector(".offer-scroll");
-// const contactTab = document.querySelector(".contact-scroll");
-
-// window.onscroll = () => {
-//   let currentScrollPos = window.pageYOffset;
-
-//   if (currentScrollPos < 412) {
-//     homeTab.classList.add("scroll-active");
-//     aboutusTab.classList.remove("scroll-active");
-//     offerTab.classList.remove("scroll-active");
-//     contactTab.classList.remove("scroll-active");
-//   } else if (currentScrollPos > 412 && currentScrollPos < 800) {
-//     homeTab.classList.remove("scroll-active");
-//     offerTab.classList.remove("scroll-active");
-//     aboutusTab.classList.add("scroll-active");
-//   } else if (currentScrollPos > 1000) {
-//     homeTab.classList.remove("scroll-active");
-//     aboutusTab.classList.remove("scroll-active");
-//     offerTab.classList.add("scroll-active");
-//   } else {
-//     homeTab.classList.remove("scroll-active");
-//   }
-// };
 // ============================================================================
 // OFFER-CARDS
 

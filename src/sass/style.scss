@@ -214,16 +214,16 @@ ul {
   }
 }
 
+.scroll-active {
+  background-color: c.$black;
+  color: c.$white !important;
+}
+
 .scroll-up {
   transform: translateY(0%);
 }
 .scroll-down {
   transform: translateY(-150%);
-}
-
-.scroll-active {
-  background-color: c.$black;
-  color: c.$white !important;
 }
 
 .side-nav {
