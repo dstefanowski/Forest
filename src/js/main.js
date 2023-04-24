@@ -2,6 +2,7 @@
 // ============================================================================
 // =============================================================================
 // Scroll-reveal & scrollSpy
+
 const homeTab = document.querySelector(".home-scroll");
 const aboutusTab = document.querySelector(".aboutus-scroll");
 const offerTab = document.querySelector(".offer-scroll");
@@ -111,7 +112,8 @@ sendBtn.addEventListener("click", () => {
     messageInput.checkValidity() &&
     checkbox.checkValidity()
   ) {
-    popup.classList.add("show-popup");
+    // popup.classList.add("show-popup");
+    window.location.href = "../../thankyou.html";
   } else {
     alert("Wypełnij wszystkie pola formularza!");
   }

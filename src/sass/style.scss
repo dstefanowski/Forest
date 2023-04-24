@@ -784,6 +784,83 @@ ul {
   }
 }
 
+// =============================================================
+// ThankYou page
+
+.thankyou-page {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    height: 100vh;
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    // margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 2rem;
+    // margin-bottom: 30px;
+  }
+
+  a {
+    margin-top: 20px;
+    font-size: 26px;
+    color: c.$black;
+    transition: color 0.2s;
+
+    &:hover {
+      color: c.$pastel-green;
+    }
+  }
+}
+
+// =============================================================
+// ThankYou page
+
+.bdgtw-page {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    height: 100vh;
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    // margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 2rem;
+    // margin-bottom: 30px;
+  }
+
+
+  a {
+    margin-top: 20px;
+    font-size: 26px;
+    color: c.$black;
+    transition: color 0.2s;
+
+    &:hover {
+      color: c.$pastel-green;
+    }
+  }
+}
+
 // MEDIA =======================================================
 
 @media (min-width: 375px) {
