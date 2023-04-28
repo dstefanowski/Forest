@@ -112,7 +112,6 @@ sendBtn.addEventListener("click", () => {
     messageInput.checkValidity() &&
     checkbox.checkValidity()
   ) {
-    // popup.classList.add("show-popup");
     window.location.href = "../../thankyou.html";
   } else {
     alert("Wypełnij wszystkie pola formularza!");
